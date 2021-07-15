@@ -41,7 +41,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[4.000573600001667,9.489054700017329],[4.268794333155035,9.886253225682585]]);
+        }).fitBounds([[4.000304658726489,9.489054540516026],[4.269063295109431,9.886253534135358]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -77,10 +77,10 @@
         function pop_Arrondissement_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ADM3_FR'] !== null ? autolinker.link(feature.properties['ADM3_FR'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Arrondissement</strong><br />' + (feature.properties['ADM3_FR'] !== null ? autolinker.link(feature.properties['ADM3_FR'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ADM2_FR'] !== null ? autolinker.link(feature.properties['ADM2_FR'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Departement</strong><br />' + (feature.properties['ADM2_FR'] !== null ? autolinker.link(feature.properties['ADM2_FR'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -116,25 +116,25 @@
         function pop_Universits_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['NOM'] !== null ? autolinker.link(feature.properties['NOM'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Nom</strong><br />' + (feature.properties['NOM'] !== null ? autolinker.link(feature.properties['NOM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['SPECIALITIES'] !== null ? autolinker.link(feature.properties['SPECIALITIES'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Spécialités</strong><br />' + (feature.properties['SPECIALITIES'] !== null ? autolinker.link(feature.properties['SPECIALITIES'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['CYCLE'] !== null ? autolinker.link(feature.properties['CYCLE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Cycle</strong><br />' + (feature.properties['CYCLE'] !== null ? autolinker.link(feature.properties['CYCLE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Creation_date'] !== null ? autolinker.link(feature.properties['Creation_date'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Année de Création</strong><br />' + (feature.properties['Creation_date'] !== null ? autolinker.link(feature.properties['Creation_date'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Contact'] !== null ? autolinker.link(feature.properties['Contact'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Téléphone</strong><br />' + (feature.properties['Contact'] !== null ? autolinker.link(feature.properties['Contact'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['id_sud-div'] !== null ? autolinker.link(feature.properties['id_sud-div'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Arrondissement</strong><br />' + (feature.properties['id_sud-div'] !== null ? autolinker.link(feature.properties['id_sud-div'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Percentage'] !== null ? autolinker.link(feature.properties['Percentage'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Taux de Réussite</strong><br />' + (feature.properties['Percentage'] !== null ? autolinker.link(feature.properties['Percentage'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
